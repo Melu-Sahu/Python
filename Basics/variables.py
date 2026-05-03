@@ -48,7 +48,7 @@ var3 = float(20.45)
 
 
 ####
-/* 
+"""
     Text Type (Sring)   - str
     Numeric Type        - int, float, complex
     Sequence            - list, tuple, range
@@ -57,7 +57,7 @@ var3 = float(20.45)
     Boolean             - bool
     Binary              - bytes, bytearray, memoryview
     None                - none type
-*/
+"""
 
 
 
