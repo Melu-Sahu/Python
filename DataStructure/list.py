@@ -67,3 +67,30 @@ for fruit in b:
 squares = [x**2 for x in range(1,6)]
 print(squares)
 
+
+
+
+
+########### Importent Insite
+list1 = [1, 2]
+list2 = [1, 2]
+
+# Check if list objects are the same
+lists_same = list1 is list2
+
+# Check if the integers inside are the same objects
+el1_same = list1[0] is list2[0]
+el2_same = list1[1] is list2[1]
+
+print(f"{lists_same=}")
+print(f"{el1_same=}")
+print(f"{el2_same=}")
+print(f"Address of 1: {id(list1[0])}")
+print(f"Address of 1: {id(list2[0])}")
+
+
+# -------------Summary of your logic-----------------
+
+# The Lists: Different memory addresses (Unique containers).
+# The Elements: Same memory addresses (Shared pointers).
+# Mutation: If you change an element, that specific list just gets a new pointer to a new object.
