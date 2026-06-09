@@ -32,6 +32,72 @@ class Patterns:
                 print("*", end='')
             print('')
 
+    def pattern7(self, n):
+        for i in range(1, n):
+            for j in range(0, n-i):
+                print(" ", end='')
+            for j in range(0, 2*i-1):
+                print("*", end='')
+
+            for j in range(0, n-i):
+                print(" ", end='')
+            print()
+    
+    def pattern8(self, n):
+        for i in range(0, n):
+            for j in range(0, n-i):
+                print(" ", end='')
+            for j in range(0, 2*i-1):
+                print("*", end='')
+
+            for j in range(0, n-i):
+                print(" ", end='')
+            print()
+    
+    def pattern9(self, n):
+        for i in range(0, n):
+            for j in range(0, i):
+                print(" ", end='')
+            for j in range(0, 2*(n-i)-1):
+                print("*", end='')
+
+            for j in range(0, i):
+                print(" ", end='')
+            print()
+    def pattern10(self, n):
+        for i in range(0, 2*n-1):
+            stars = i
+            # if(i>n): stars = 2*n-i
+
+            if(i<n):
+                print("*"*(i+1))
+            else:
+                print("*"*(2*n-i-1))
+            # for j in range(0, stars):
+            #     print("*", end='')
+            # print()
+
+    def pattern11(self, n):
+        start = 1
+        for i in range(0, n):
+            if(i%2==0): 
+                start = 1
+            else:
+                start = 0
+            for j in range(0, i):
+                print(start, end='')
+                start = 1-start
+            print()
+
+    def pattern12(self, n):
+        for i in range(1, n):
+            for j in range(1, i):
+                print(j, end='')
+            for j in range(1, 2*n-i):
+                print(" ", end='')
+            for j in range(1, i):
+                print(2*i -j, end='')
+            print()
 
 solution = Patterns();
 
@@ -40,4 +106,8 @@ solution = Patterns();
 # solution.pattern3(5); # time complexity O(n^2)
 # solution.pattern4(5); # time complexity O(n^2)
 # solution.pattern5(5); # time complexity O(n^2)
-solution.pattern6(5); # time complexity O(n^2)
+# solution.pattern6(5); # time complexity O(n^2)
+# solution.pattern8(5); # time complexity O(n^3)
+# solution.pattern9(5); # time complexity O(n^3)
+# solution.pattern11(10); # time complexity O(n)
+solution.pattern12(6); # time complexity O(n)
